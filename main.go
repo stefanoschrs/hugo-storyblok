@@ -34,7 +34,7 @@ type Post struct {
 func getPosts(token string) (posts []Post, err error)  {
 	var body []byte
 	if os.Getenv("DEV") != "" {
-		body, err = ioutil.ReadFile("stories.json")
+		body, err = ioutil.ReadFile("stories.example.json")
 		if err != nil {
 			return
 		}
